@@ -306,6 +306,12 @@ img {
 /* Team */
 
 .about-team {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-team {
   padding: 94px 0;
   background: var(--color-section-team);
 }
@@ -465,6 +471,12 @@ margin-bottom: 50px;
 
 
 /* Footer */
+
+.footer {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 footer {
   padding: 60px 0;
