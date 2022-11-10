@@ -37,7 +37,7 @@ p {
 }
 
 body {
- 
+
   font-family: "Roboto", sans-serif;
   background: var(--color-background-title);
   font-size: 14px;
@@ -54,12 +54,12 @@ body {
 
 /* Header */
 
-
-
-.header {
+.page-header {
   margin-bottom: 0;
   border-bottom: 1px solid #ececec;
+}
 
+.header {
   display: flex;
   align-items: center;
 }
@@ -129,7 +129,7 @@ body {
   color: var(--color-logo-header-hover);
 }
 
-.nav-list a:hover, 
+.nav-list a:hover,
 .nav-list a:focus,
 .auth-nav a:hover,
 .auth-nav a:focus {
@@ -149,11 +149,6 @@ body {
 
 
 /* Main */
-.hero {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .hero {
   background: #C4C4C4;
@@ -161,8 +156,15 @@ body {
   padding-bottom: 200px;
   margin-top: 0;
   text-align: center;
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)), url(../image/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: cover;
+ 
 }
 
 
@@ -303,13 +305,29 @@ img {
   width: 370px;
 }
 
-/* Team */
-
-.about-team {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+/* .list-employment .item {
+  position: relative;
 }
+
+.description-employment {
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 80%);
+  position: absolute; 
+  bottom: 0;
+
+}
+
+.employment-text {
+  margin-top: 27px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-title-hero);
+} */
+
+/* Team */
 
 .about-team {
   padding: 94px 0;
@@ -408,7 +426,8 @@ img {
   background-color: var(--color-logo-header-hover);
 }
 
-.social-link:hover .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: #ffffff;
 }
 
@@ -420,7 +439,7 @@ img {
 /* Clients icons */
 
 .clients {
-  padding: 60px 0;
+  padding: 94px 0;
 }
 
 .client-list {
@@ -428,55 +447,44 @@ img {
 }
 
 .client-title {
-font-size: 36px;
-line-height: 42px;
-text-align: center;
-color: var(--color-text);
-margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 50px;
 }
 
-.clients-icons .client-item {
+ .client-link {
   width: 170px;
   height: 92px;
-  margin-right: 30px;
+  color: #AFB1B8;
   border: 2px solid #AFB1B8;
   border-radius: 4%;
-}
-
-.clients-icons .client-item:last-child {
-  margin-right: 0;
-}
-
-.client-list .client-link {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
-.clients-icons .client-item:hover,
-.clients-icons .client-item:focus {
-  border-color: var(--color-logo-header-hover);
+ .client-icon {
+  fill: currentColor;
 }
 
-.client-list .client-link:hover,
-.client-list .client-link:focus {
+.client-link:hover {
+ border-color: #2196f3; 
+ color: #2196f3;
+}
+
+.client-link:focus .client-icon {
+  border-color: #2196f3;
   fill: #2196f3;
-}
+ } 
 
-.client-list .client-link {
-  fill: #AFB1B8;
-}
-
+ .client-item:not(:last-child) {
+  margin-right: 30px;
+ }
 
 /* Footer */
-
-.footer {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 footer {
   padding: 60px 0;
@@ -518,7 +526,8 @@ footer {
 
 .footer .container {
   display: flex;
-  align-items: baseline;;
+  align-items: baseline;
+  ;
 }
 
 .footer-icons {
@@ -533,10 +542,10 @@ footer {
   color: var(--color-background-title)
 }
 
- .footer-icons .social-icons {
+.footer-icons .social-icons {
   display: flex;
   margin-top: 16px;
-} 
+}
 
 .footer-icons .social-item {
   width: 44px;
@@ -561,7 +570,7 @@ footer {
 
 .footer-icons .social-link:hover,
 .footer-icons .social-link:focus {
-   background-color: var(--color-logo-header-hover);
+  background-color: var(--color-logo-header-hover);
 }
 
 .footer-icons .social-link {
@@ -614,8 +623,8 @@ footer {
   background: var(--color-logo-header-hover);
   color: #ffffff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 10%),
-  0px 2px 1px 0px rgba(0, 0, 0, 8%),
-  0px 2px 2px 0px rgba(0, 0, 0, 12%);
+    0px 2px 1px 0px rgba(0, 0, 0, 8%),
+    0px 2px 2px 0px rgba(0, 0, 0, 12%);
 }
 
 
@@ -674,6 +683,6 @@ img {
 .project-card:hover,
 .project-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 12%),
-  0px 4px 4px rgba(0, 0, 0, 6%),
-  1px 6px 4px rgba(0, 0, 0, 16%)
+    0px 4px 4px rgba(0, 0, 0, 6%),
+    1px 6px 4px rgba(0, 0, 0, 16%)
 }
