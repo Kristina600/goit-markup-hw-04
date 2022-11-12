@@ -164,7 +164,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   background-size: cover;
- 
+  max-width: 1600px;
 }
 
 
@@ -374,7 +374,7 @@ img {
 
 .text-team {
   text-align: center;
-  padding-top: 30px;
+  padding: 30px;
 
 }
 
@@ -397,7 +397,7 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  padding-bottom: 30px;
+  
 }
 
 .team-list .social-item {
@@ -470,15 +470,11 @@ img {
   fill: currentColor;
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
  border-color: #2196f3; 
  color: #2196f3;
 }
-
-.client-link:focus .client-icon {
-  border-color: #2196f3;
-  fill: #2196f3;
- } 
 
  .client-item:not(:last-child) {
   margin-right: 30px;
